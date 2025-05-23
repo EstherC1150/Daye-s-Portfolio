@@ -5,6 +5,33 @@ import { images } from "../../constants/images";
 const AboutSection = () => {
   const { name, introduction } = useProfileStore();
 
+  const techIcons = [
+    // Development
+    { src: images.icons.development.javascript, alt: "JavaScript" },
+    { src: images.icons.development.typescript, alt: "TypeScript" },
+    { src: images.icons.development.react, alt: "React" },
+    { src: images.icons.development.vite, alt: "Vite" },
+    { src: images.icons.development.nextjs, alt: "Next.js" },
+    { src: images.icons.development.vue, alt: "Vue" },
+    { src: images.icons.development.nodejs, alt: "Node.js" },
+    { src: images.icons.development.oracle, alt: "Oracle" },
+    { src: images.icons.development.mysql, alt: "MySQL" },
+    { src: images.icons.development.mssql, alt: "MSSQL" },
+    { src: images.icons.development.linux, alt: "Linux" },
+    { src: images.icons.development.docker, alt: "Docker" },
+    { src: images.icons.development.aws, alt: "AWS" },
+    { src: images.icons.development.github, alt: "GitHub" },
+    { src: images.icons.development.vercel, alt: "Vercel" },
+    { src: images.icons.development.discord, alt: "Discord" },
+    { src: images.icons.development.postman, alt: "Postman" },
+    // Design
+    { src: images.icons.design.figma, alt: "Figma" },
+    { src: images.icons.design.photoshop, alt: "Photoshop" },
+    { src: images.icons.design.illustrator, alt: "Illustrator" },
+    { src: images.icons.design.inDesign, alt: "InDesign" },
+    { src: images.icons.design.xd, alt: "XD" },
+  ];
+
   return (
     <section
       id="about"
@@ -20,7 +47,8 @@ const AboutSection = () => {
           About Me
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
+        {/* 프로필 이미지와 소개 섹션 */}
+        <div className="grid grid-cols-1 gap-12 items-start md:grid-cols-2 mb-16">
           {/* 프로필 이미지 섹션 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -74,14 +102,20 @@ const AboutSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-wrap gap-2 justify-center mt-6"
             >
-              <span className="px-3 py-1 text-sm text-[#FFA559] bg-[#FFF6F0] rounded-full pretendard">
+              <span className="px-3 py-1 text-sm text-[#FFF] bg-[#FF4D00] rounded-full pretendard transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
                 #꾸준함
               </span>
-              <span className="px-3 py-1 text-sm text-[#FFA559] bg-[#FFF6F0] rounded-full pretendard">
-                #홈발함
+              <span className="px-3 py-1 text-sm text-[#FFF] bg-[#FF4D00] rounded-full pretendard transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                #협동심
               </span>
-              <span className="px-3 py-1 text-sm text-[#FFA559] bg-[#FFF6F0] rounded-full pretendard">
+              <span className="px-3 py-1 text-sm text-[#FFF] bg-[#FF4D00] rounded-full pretendard transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
                 #성장중
+              </span>
+              <span className="px-3 py-1 text-sm text-[#FFF] bg-[#FF4D00] rounded-full pretendard transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                #적응력
+              </span>
+              <span className="px-3 py-1 text-sm text-[#FFF] bg-[#FF4D00] rounded-full pretendard transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                #도전정신
               </span>
             </motion.div>
           </motion.div>
@@ -106,100 +140,54 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="leading-relaxed text-gray-600 pretendard"
+                className="leading-relaxed text-[#1a1a1a] pretendard whitespace-pre-wrap text-lg"
               >
                 {introduction ||
-                  "저는 웹 개발에 열정을 가진 개발자입니다. 사용자 경험을 중요시하며, 항상 새로운 기술을 배우고 적용하는 것을 좋아합니다."}
+                  `안녕하세요! 저는 꾸준함과 도전정신을 바탕으로 성장하는 웹 개발자입니다.
+웹디자인 경험을 살려 기능 뿐 아니라 UX/UI 디자인까지 고려한 개발을 지향합니다.
+
+React, Next.js, Tailwind CSS 기술을 주로 사용하며,
+Node.js로 REST API 서버 구축이 가능합니다.
+또한 MySQL, Oracle, MSSQL 등의 DBMS 사용이 가능합니다.
+
+백엔드에도 관심이 많아, 전반적인 개발에 함께 기여하고 싶습니다.
+맡은 일에 애정을 갖고 책임감 있게 임하며, 주어진 역할 속에서 가치를 만들어내는 개발자가 되고자 합니다.`}
               </motion.p>
             </div>
-
-            {/* 기술 스택 섹션 */}
-            <div className="space-y-4">
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-2xl font-semibold text-[#1A1A1A] pretendard"
-              >
-                Tech Stack
-              </motion.h3>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap gap-6"
-              >
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img
-                      src="/icons/typescript.svg"
-                      alt="TypeScript"
-                      className="w-6 h-6"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    TypeScript
-                  </span>
-                </div>
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img
-                      src="/icons/react.svg"
-                      alt="React"
-                      className="w-6 h-6"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    React
-                  </span>
-                </div>
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img
-                      src="/icons/nextjs.svg"
-                      alt="Next.js"
-                      className="w-6 h-6"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    Next.js
-                  </span>
-                </div>
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img
-                      src="/icons/tailwind.svg"
-                      alt="Tailwind"
-                      className="w-6 h-6"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    Tailwind
-                  </span>
-                </div>
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img
-                      src="/icons/nodejs.svg"
-                      alt="Node.js"
-                      className="w-6 h-6"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    Node.js
-                  </span>
-                </div>
-                <div className="flex gap-2 items-center group">
-                  <div className="p-2 bg-white rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-md">
-                    <img src="/icons/git.svg" alt="Git" className="w-6 h-6" />
-                  </div>
-                  <span className="text-sm text-gray-600 pretendard group-hover:text-[#FFA559] transition-colors duration-300">
-                    Git
-                  </span>
-                </div>
-              </motion.div>
-            </div>
           </motion.div>
+        </div>
+
+        {/* 기술 스택 섹션 */}
+        <div className="mt-16">
+          <div className="overflow-hidden">
+            <motion.div className="flex flex-wrap items-center justify-between gap-1.5">
+              {techIcons.map((icon, index) => (
+                <motion.img
+                  key={icon.alt}
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-12 h-12"
+                  initial={{ x: "200%", opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15,
+                    delay: index * 0.1,
+                    duration: 0.8,
+                  }}
+                  whileHover={{
+                    scale: 1.2,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
+                    },
+                  }}
+                />
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
