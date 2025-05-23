@@ -1,0 +1,82 @@
+import { useEffect, useState } from "react";
+import Navigation from "../Navigation/Navigation";
+
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header
+      className={`
+        fixed top-0 left-0 right-0 z-50
+        transition-all duration-300
+        ${scrolled ? "shadow-md backdrop-blur-md bg-white/20" : ""}`}
+    >
+      <div className="flex justify-between items-center px-12 py-8 text-[#1A1A1A]">
+        <a
+          href="/"
+          className="text-xl font-bold pretendard hover:text-[#FFA559] transition-colors duration-300"
+        >
+          Daye's Web Portfolio
+        </a>
+
+        {/* 데스크톱 네비게이션 */}
+        <div className="hidden md:block">
+          <Navigation />
+        </div>
+
+        {/* 모바일 메뉴 버튼 */}
+        <button
+          className="p-2 md:hidden"
+          onClick={toggleMenu}
+          aria-label="메뉴 열기"
+        >
+          <div className="flex flex-col justify-between w-6 h-5">
+            <span
+              className={`block w-full h-0.5 bg-gray-800 transition-transform ${
+                isMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-full h-0.5 bg-gray-800 transition-opacity ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-full h-0.5 bg-gray-800 transition-transform ${
+                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            ></span>
+          </div>
+        </button>
+
+        {/* 모바일 네비게이션 */}
+        <div
+          className={`md:hidden transition-all duration-300 ${
+            isMenuOpen
+              ? "max-h-48 opacity-100"
+              : "overflow-hidden max-h-0 opacity-0"
+          }`}
+        >
+          <div className="shadow-lg backdrop-blur-md bg-white/95">
+            <Navigation isMobile={true} />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

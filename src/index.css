@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Ownglyph_corncorn-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.corncorn {
+  font-family: "Ownglyph_corncorn-Rg", sans-serif;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.animate-draw-line {
+  animation: drawLine 1.5s ease-in-out forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@keyframes pop-arrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(12px);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-pop-arrow {
+  animation: pop-arrow 1.1s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
