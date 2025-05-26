@@ -44,11 +44,11 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 text-4xl font-bold text-[#1A1A1A] pretendard"
         >
-          About Me
+          ABOUT ME
         </motion.h2>
 
         {/* 프로필 이미지와 소개 섹션 */}
-        <div className="grid grid-cols-1 gap-12 items-start md:grid-cols-2 mb-16">
+        <div className="grid grid-cols-1 gap-12 items-start mb-16 md:grid-cols-2">
           {/* 프로필 이미지 섹션 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -158,33 +158,38 @@ Node.js로 REST API 서버 구축이 가능합니다.
         </div>
 
         {/* 기술 스택 섹션 */}
-        <div className="mt-16">
-          <div className="overflow-hidden">
-            <motion.div className="flex flex-wrap items-center justify-between gap-1.5">
+        <div className="mt-14">
+          <div className="w-full">
+            <motion.div className="flex flex-wrap gap-3 justify-between h-16">
               {techIcons.map((icon, index) => (
-                <motion.img
+                <motion.div
                   key={icon.alt}
-                  src={icon.src}
-                  alt={icon.alt}
-                  className="w-12 h-12"
-                  initial={{ x: "200%", opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 15,
-                    delay: index * 0.1,
-                    duration: 0.8,
-                  }}
-                  whileHover={{
-                    scale: 1.2,
-                    transition: {
+                  className="flex overflow-visible justify-center items-center"
+                >
+                  <motion.img
+                    src={icon.src}
+                    alt={icon.alt}
+                    className="w-10 h-10"
+                    initial={{ x: "200%", opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
                       type: "spring",
-                      stiffness: 400,
-                      damping: 10,
-                    },
-                  }}
-                />
+                      stiffness: 100,
+                      damping: 15,
+                      delay: index * 0.1,
+                      duration: 0.8,
+                    }}
+                    whileHover={{
+                      scale: 1.2,
+                      transition: {
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      },
+                    }}
+                  />
+                </motion.div>
               ))}
             </motion.div>
           </div>

@@ -12,10 +12,10 @@ const Navigation = ({ isMobile = false }: NavigationProps) => {
         ABOUT ME
       </a>
       <a
-        href="#career"
+        href="#experience"
         className="font-medium text-[#1A1A1A] hover:text-[#FFA559] transition-colors duration-300 pretendard"
       >
-        CAREER
+        EXPERIENCE
       </a>
       <a
         href="#project"
