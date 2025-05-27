@@ -36,9 +36,6 @@ const ContactSection = () => {
           항상 사용자의 관점에서 생각하며 사용하기 좋은 서비스를 만들고
           싶습니다.
         </motion.p>
-        <div className="mb-6 text-sm text-center text-gray-500 break-all select-all">
-          daye511@naver.com
-        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
