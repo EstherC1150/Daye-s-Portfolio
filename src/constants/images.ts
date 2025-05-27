@@ -34,7 +34,13 @@ export const images = {
     // 배경 이미지들이 추가될 때 여기에 추가
   },
   projects: {
-    // 프로젝트 관련 이미지들이 추가될 때 여기에 추가
+    portfolio: "/images/project/20250527_134534_4.jpg",
+    spesate: "/images/project/20250527_134534_1.jpg",
+    libraryManager: "/images/project/20250527_134534_3.jpg",
+    rckhome: "/images/project/20250527_134711.jpg",
+    drcome: "/images/project/drcome.png",
+    daedanae: "/images/project/daedanae.png",
+    daedanae2: "/images/project/daedanae_r.png",
   },
   // 필요한 카테고리 추가 가능
 } as const;
