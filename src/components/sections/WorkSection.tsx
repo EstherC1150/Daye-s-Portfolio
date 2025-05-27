@@ -48,13 +48,15 @@ const WorkSection = () => {
       period: "2023.08 - 2024.02",
       school: "㈜예담직업전문학교",
       major: "(산대특)실무 프로젝트 기반 Vue, Spring 개발자 양성 과정",
-      description: "대구",
+      description:
+        "HTML, CSS, JavaScript, Java 기초부터 Vue.js 프론트엔드 개발 • Spring Framework와 Oracle DB를 활용한 백엔드 개발 실무 프로젝트 수행",
     },
     {
       period: "2021.07 - 2021.12",
-      school: "sbs아카데미학원",
+      school: "SBS아카데미컴퓨터아트학원 대구",
       major: "(디지털디자인)[스마트혼합과정]스마트기기 UXUI 웹디자이너양성",
-      description: "대구",
+      description:
+        "Adobe Photoshop, Illustrator를 활용한 웹디자인 실무 교육 • HTML, CSS, jQuery를 통한 웹 퍼블리싱 실습",
     },
   ];
 
