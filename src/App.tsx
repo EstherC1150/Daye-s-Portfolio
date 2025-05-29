@@ -7,6 +7,7 @@ import AboutSection from "./components/sections/AboutSection";
 import WorkSection from "./components/sections/WorkSection";
 import ProjectSection from "./components/sections/ProjectSection";
 import ContactSection from "./components/sections/ContactSection";
+import TopButton from "./components/common/TopButton";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ProjectSection />
         <ContactSection />
       </main>
+      <TopButton />
     </>
     // <BrowserRouter>
     //   <Header />

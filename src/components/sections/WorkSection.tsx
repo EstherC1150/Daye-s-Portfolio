@@ -89,7 +89,7 @@ const WorkSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group relative"
+                  className="relative group"
                 >
                   <div className="relative bg-white rounded-2xl p-5 w-full transition-all duration-500 hover:-translate-y-1 shadow-none hover:shadow-xl h-full min-h-[120px]">
                     <div className="relative">
@@ -114,13 +114,13 @@ const WorkSection = () => {
                               line.trim().length > 0 ? (
                               <span
                                 key={i}
-                                className="block font-semibold text-base mt-3 mb-1"
+                                className="block mt-3 mb-1 text-base font-semibold"
                               >
                                 {line}
                               </span>
                             ) : line.startsWith("•") ? (
                               <span key={i} className="block pl-2 mb-1">
-                                <span className="font-bold mr-2">•</span>
+                                <span className="mr-2 font-bold">•</span>
                                 <span>{line.replace(/^•\s*/, "")}</span>
                               </span>
                             ) : null
@@ -150,9 +150,9 @@ const WorkSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group relative"
+                  className="relative group"
                 >
-                  <div className="relative bg-white rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 shadow-none hover:shadow-xl h-full">
+                  <div className="relative p-8 h-full bg-white rounded-3xl shadow-none transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
                     <div className="relative">
                       <div className="flex gap-4 items-center mb-6">
                         <div className="text-sm text-[#FF4D00] font-medium tracking-wider">
