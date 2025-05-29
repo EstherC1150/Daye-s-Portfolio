@@ -16,7 +16,7 @@ const ProjectSection = () => {
 • 모던한 UI/UX 디자인 적용
 • 반응형 레이아웃으로 모든 디바이스 지원`,
       technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
-      link: "https://github.com/yourusername/portfolio",
+      link: "https://github.com/EstherC1150/Daye-s-Portfolio",
     },
     {
       title: "라이브러리 관리기",
@@ -38,7 +38,7 @@ const ProjectSection = () => {
 • SEO 최적화 및 성능 개선
 • 관리자 페이지 개발`,
       technologies: ["React", "Next.js", "Tailwind CSS", "Vercel"],
-      link: "#",
+      link: "https://spesate.com/",
     },
     {
       title: "알씨케이 홈페이지",
@@ -49,33 +49,56 @@ const ProjectSection = () => {
 • SSG/SSR 혼합 방식으로 성능 최적화
 • Serverless 함수를 활용한 운영 효율성 강화`,
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-      link: "#",
+      link: "https://rckorea.vercel.app/",
     },
     {
-      title: "drcome 웹",
-      shortDescription: "drcome 웹 개발",
+      title: "비대면 의료 플랫폼",
+      shortDescription: "코로나19 팬데믹 대응 온라인 진료 플랫폼",
       thumbnail: images.projects.drcome,
-      fullDescription: `• drcome 웹 개발`,
+      fullDescription: `• 코로나19 팬데믹 시대 비대면 의료 서비스 수요 증가에 대응한 온라인 진료 플랫폼
+• 환자-의사 간 실시간 화상 진료 및 온라인 상담 서비스 구현
+• 안전하고 편리한 원격 의료 서비스로 의료 접근성 향상
+• 실시간 화상 진료 시스템 및 온라인 예약 관리
+• 환자-의사 매칭 서비스 및 진료 기록 관리 시스템`,
       technologies: [
-        "Spring",
+        "Java",
         "Spring Boot",
-        "Spring Security",
+        "MyBatis",
         "JPA",
-        "MySQL",
-        "AWS",
-        "Docker",
+        "Oracle DB",
+        "HTML/CSS/JavaScript",
+        "jQuery",
+        "Bootstrap5",
+        "Thymeleaf",
+        "AWS EC2",
         "Jenkins",
+        "Docker",
         "Nginx",
       ],
-      link: "#",
+      link: "https://github.com/EstherC1150/Dr.ComeProject",
     },
     {
-      title: "대다네 웹",
-      shortDescription: "대다네 웹 개발",
+      title: "비대면 음식점 예약 플랫폼",
+      shortDescription: "포스트 코로나 시대 안전한 비대면 예약 서비스",
       thumbnail: images.projects.daedanae2,
-      fullDescription: `• 대다네 웹 개발`,
-      technologies: ["Vue", "Node.js", "Oracle"],
-      link: "#",
+      fullDescription: `• 포스트 코로나 시대 안전한 비대면 예약 서비스로 고객 편의성 향상
+• 지역 음식점 홍보 공간 제공을 통한 지역 경제 활성화 기여
+• 업체 매출 증대와 고객 만족도 향상을 동시에 실현하는 윈-윈 플랫폼
+• 비대면 실시간 예약 시스템 및 음식점 정보 홍보 서비스
+• 예약 관리 및 알림 기능, 지역별 맛집 검색 및 추천`,
+      technologies: [
+        "HTML/CSS/JavaScript",
+        "jQuery",
+        "Bootstrap5",
+        "MySQL",
+        "AWS RDS",
+        "MySQL Workbench",
+        "Ajax",
+        "Axios",
+        "RESTful API",
+        "PL/SQL",
+      ],
+      link: "https://github.com/EstherC1150/DaeDaNae_NodeVue",
     },
   ];
 
@@ -155,7 +178,7 @@ const ProjectSection = () => {
                     {projects[selectedProject].title}
                   </h3>
                   <div className="space-y-4">
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 whitespace-pre-line">
                       {projects[selectedProject].fullDescription}
                     </p>
                     <div className="flex flex-wrap gap-2">

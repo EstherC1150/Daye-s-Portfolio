@@ -1,6 +1,6 @@
 export const images = {
   profile: {
-    main: "/images/test01.jpg",
+    main: "/images/KakaoTalk_20250529_104401788.jpg",
   },
   icons: {
     development: {
