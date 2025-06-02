@@ -8,10 +8,12 @@ import WorkSection from "./components/sections/WorkSection";
 import ProjectSection from "./components/sections/ProjectSection";
 import ContactSection from "./components/sections/ContactSection";
 import TopButton from "./components/common/TopButton";
+import Header from "./components/layout/Header/Header";
 
 function App() {
   return (
     <>
+      <Header />
       <main>
         <MainBanner />
         <AboutSection />

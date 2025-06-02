@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
+import MobileSidebarMenu from "./MobileSidebarMenu";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +25,7 @@ const Header = () => {
         transition-all duration-300
         ${scrolled ? "shadow-md backdrop-blur-md bg-white/20" : ""}`}
     >
-      <div className="flex justify-between items-center px-12 py-8 text-[#1A1A1A]">
+      <div className="flex justify-between items-center px-4 md:px-12 py-4 md:py-8 text-[#1A1A1A]">
         <a
           href="/"
           className="text-xl font-bold pretendard hover:text-[#FFA559] transition-colors duration-300"
@@ -45,36 +46,26 @@ const Header = () => {
         >
           <div className="flex flex-col justify-between w-6 h-5">
             <span
-              className={`block w-full h-0.5 bg-gray-800 transition-transform ${
+              className={`block w-full h-0.5 bg-gray-800 transition-transform duration-300 ${
                 isMenuOpen ? "rotate-45 translate-y-2" : ""
               }`}
-            ></span>
+            />
             <span
-              className={`block w-full h-0.5 bg-gray-800 transition-opacity ${
+              className={`block w-full h-0.5 bg-gray-800 transition-opacity duration-300 ${
                 isMenuOpen ? "opacity-0" : ""
               }`}
-            ></span>
+            />
             <span
-              className={`block w-full h-0.5 bg-gray-800 transition-transform ${
+              className={`block w-full h-0.5 bg-gray-800 transition-transform duration-300 ${
                 isMenuOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
-            ></span>
+            />
           </div>
         </button>
-
-        {/* 모바일 네비게이션 */}
-        <div
-          className={`md:hidden transition-all duration-300 ${
-            isMenuOpen
-              ? "max-h-48 opacity-100"
-              : "overflow-hidden max-h-0 opacity-0"
-          }`}
-        >
-          <div className="shadow-lg backdrop-blur-md bg-white/95">
-            <Navigation isMobile={true} />
-          </div>
-        </div>
       </div>
+
+      {/* 모바일 사이드바 */}
+      <MobileSidebarMenu isOpen={isMenuOpen} onClose={toggleMenu} />
     </header>
   );
 };

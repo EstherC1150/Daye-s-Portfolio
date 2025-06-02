@@ -39,9 +39,6 @@ export default function MainBanner() {
 
       {/* 모든 컨텐츠는 z-20 이상 */}
       <div className="flex relative z-20 flex-col min-h-screen">
-        {/* 헤더 - showBg가 true일 때만 보임 */}
-        {showBg && <Header />}
-
         {/* 메인 텍스트 */}
         <main className="flex relative flex-col flex-1 justify-center items-center">
           <div className="flex relative flex-col items-center w-fit">

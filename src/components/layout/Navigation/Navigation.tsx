@@ -1,10 +1,17 @@
 interface NavigationProps {
   isMobile?: boolean;
+  onLinkClick?: () => void;
 }
 
-const Navigation = ({ isMobile = false }: NavigationProps) => {
+const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
   return (
-    <nav className={`${isMobile ? "flex flex-col gap-4 p-4" : "flex gap-16"}`}>
+    <nav
+      className={`${
+        isMobile
+          ? "flex flex-col gap-8 items-center w-full text-center"
+          : "flex gap-16"
+      }`}
+    >
       <a
         href="#about"
         onClick={(e) => {
@@ -12,8 +19,13 @@ const Navigation = ({ isMobile = false }: NavigationProps) => {
           document
             .getElementById("about")
             ?.scrollIntoView({ behavior: "smooth" });
+          if (isMobile && onLinkClick) onLinkClick();
         }}
-        className="font-medium text-[#1A1A1A] hover:text-[#FFA559] transition-colors duration-300 pretendard"
+        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+          isMobile
+            ? "text-white hover:text-[#FF4D00]"
+            : "text-[#1A1A1A] hover:text-[#FFA559]"
+        }`}
       >
         ABOUT ME
       </a>
@@ -24,8 +36,13 @@ const Navigation = ({ isMobile = false }: NavigationProps) => {
           document
             .getElementById("experience")
             ?.scrollIntoView({ behavior: "smooth" });
+          if (isMobile && onLinkClick) onLinkClick();
         }}
-        className="font-medium text-[#1A1A1A] hover:text-[#FFA559] transition-colors duration-300 pretendard"
+        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+          isMobile
+            ? "text-white hover:text-[#FF4D00]"
+            : "text-[#1A1A1A] hover:text-[#FFA559]"
+        }`}
       >
         EXPERIENCE
       </a>
@@ -36,8 +53,13 @@ const Navigation = ({ isMobile = false }: NavigationProps) => {
           document
             .getElementById("project")
             ?.scrollIntoView({ behavior: "smooth" });
+          if (isMobile && onLinkClick) onLinkClick();
         }}
-        className="font-medium text-[#1A1A1A] hover:text-[#FFA559] transition-colors duration-300 pretendard"
+        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+          isMobile
+            ? "text-white hover:text-[#FF4D00]"
+            : "text-[#1A1A1A] hover:text-[#FFA559]"
+        }`}
       >
         PROJECT
       </a>
@@ -48,8 +70,13 @@ const Navigation = ({ isMobile = false }: NavigationProps) => {
           document
             .getElementById("contact")
             ?.scrollIntoView({ behavior: "smooth" });
+          if (isMobile && onLinkClick) onLinkClick();
         }}
-        className="font-medium text-[#1A1A1A] hover:text-[#FFA559] transition-colors duration-300 pretendard"
+        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+          isMobile
+            ? "text-white hover:text-[#FF4D00]"
+            : "text-[#1A1A1A] hover:text-[#FFA559]"
+        }`}
       >
         CONTACT
       </a>
