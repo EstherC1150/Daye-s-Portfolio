@@ -62,7 +62,7 @@ export default function MainBanner() {
               className={`
                 block text-5xl md:text-5xl text-black text-center select-none pretendard
                 transition-all duration-[2200ms] ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${textAnim ? "scale-100" : "scale-125"}
+                ${textAnim ? "scale-80 md:scale-100" : "scale-100 md:scale-125"}
               `}
               style={{ letterSpacing: "0.05em" }}
             >
