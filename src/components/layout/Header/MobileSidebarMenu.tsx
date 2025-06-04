@@ -58,7 +58,7 @@ const MobileSidebarMenu = ({ isOpen, onClose }: MobileSidebarMenuProps) => {
               <IoMdClose />
             </button>
             <nav className="flex flex-col gap-4 mt-12 z-100">
-              {menuItems.map((item, idx) => (
+              {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
