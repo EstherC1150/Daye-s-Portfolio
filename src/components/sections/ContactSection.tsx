@@ -102,7 +102,7 @@ const ContactSection = () => {
           </a>
           {/* kakao */}
           <a
-            href="https://velog.io/@yourvelog"
+            href="https://open.kakao.com/o/s6G2eZzh"
             className="flex relative flex-col justify-center items-center w-20 h-8 group corncorn"
             target="_blank"
             rel="noopener noreferrer"
