@@ -35,9 +35,9 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="pt-20 min-h-screen bg-gradient-to-br from-white via-gray-50 to-[#FFF6F0]"
+      className="pt-20 min-h-screen h-fit bg-gradient-to-br from-white via-gray-50 to-[#FFF6F0] overflow-x-hidden"
     >
-      <div className="px-8 py-16 mx-auto max-w-7xl">
+      <div className="px-8 py-16 mx-auto max-w-7xl h-fit">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ Node.js로 REST API 서버 구축이 가능합니다.
         {/* 기술 스택 섹션 */}
         <div className="mt-14">
           <div className="w-full">
-            <motion.div className="flex flex-wrap gap-3 justify-between h-16">
+            <motion.div className="flex flex-wrap gap-5 justify-start mx-auto md:gap-4 h-fit">
               {techIcons.map((icon, index) => (
                 <motion.div
                   key={icon.alt}
@@ -169,7 +169,7 @@ Node.js로 REST API 서버 구축이 가능합니다.
                   <motion.img
                     src={icon.src}
                     alt={icon.alt}
-                    className="w-10 h-10"
+                    className="w-8 h-8 md:w-10 md:h-10"
                     initial={{ x: "200%", opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}

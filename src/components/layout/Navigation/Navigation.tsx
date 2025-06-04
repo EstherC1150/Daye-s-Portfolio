@@ -9,7 +9,7 @@ const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
       className={`${
         isMobile
           ? "flex flex-col gap-8 items-center w-full text-center"
-          : "flex gap-16"
+          : "flex gap-30"
       }`}
     >
       <a
@@ -21,7 +21,7 @@ const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
             ?.scrollIntoView({ behavior: "smooth" });
           if (isMobile && onLinkClick) onLinkClick();
         }}
-        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+        className={`font-medium transition-colors duration-300 pretendard text-[20px] ${
           isMobile
             ? "text-white hover:text-[#FF4D00]"
             : "text-[#1A1A1A] hover:text-[#FFA559]"
@@ -38,7 +38,7 @@ const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
             ?.scrollIntoView({ behavior: "smooth" });
           if (isMobile && onLinkClick) onLinkClick();
         }}
-        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+        className={`font-medium transition-colors duration-300 pretendard text-[20px] ${
           isMobile
             ? "text-white hover:text-[#FF4D00]"
             : "text-[#1A1A1A] hover:text-[#FFA559]"
@@ -55,7 +55,7 @@ const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
             ?.scrollIntoView({ behavior: "smooth" });
           if (isMobile && onLinkClick) onLinkClick();
         }}
-        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+        className={`font-medium transition-colors duration-300 pretendard text-[20px] ${
           isMobile
             ? "text-white hover:text-[#FF4D00]"
             : "text-[#1A1A1A] hover:text-[#FFA559]"
@@ -72,7 +72,7 @@ const Navigation = ({ isMobile = false, onLinkClick }: NavigationProps) => {
             ?.scrollIntoView({ behavior: "smooth" });
           if (isMobile && onLinkClick) onLinkClick();
         }}
-        className={`font-medium transition-colors duration-300 pretendard text-2xl ${
+        className={`font-medium transition-colors duration-300 pretendard text-[20px] ${
           isMobile
             ? "text-white hover:text-[#FF4D00]"
             : "text-[#1A1A1A] hover:text-[#FFA559]"
