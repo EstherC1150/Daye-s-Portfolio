@@ -31,7 +31,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8 max-w-2xl text-lg text-center text-gray-700"
         >
-          프론트엔드 개발자로 성장하기 위해 낮선 기술에도 적극적으로 도전하고,
+          풀스택 개발자로 성장하기 위해 낮선 기술에도 적극적으로 도전하고,
           <br />
           항상 사용자의 관점에서 생각하며 사용하기 좋은 서비스를 만들고
           싶습니다.
