@@ -74,8 +74,8 @@
 /* Continuous 폰트 */
 @font-face {
   font-family: "Continuous";
-  src: url("/fonts/continuous.otf") format("opentype"),
-    url("/fonts/continuous.ttf") format("truetype");
+  src: url("/fonts/Continuous.otf") format("opentype"),
+    url("/fonts/Continuous.ttf") format("truetype");
   font-display: swap;
 }
 
