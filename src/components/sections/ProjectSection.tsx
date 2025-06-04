@@ -26,8 +26,8 @@ const ProjectSection = () => {
 • 파일 관리 서버 구축 및 유저 관리 시스템 개발
 • 카테고리별 다운로드 통계 차트 구현
 • 실시간 파일 업로드/다운로드 기능`,
-      technologies: ["React", "Node.js", "Three.js", "MongoDB"],
-      link: "#",
+      technologies: ["Next.js", "Three.js", "Node.js", "MSSQL", "PM2"],
+      link: "https://github.com/EstherC1150/vclm",
     },
     {
       title: "SPESATE 홈페이지",
@@ -37,7 +37,7 @@ const ProjectSection = () => {
 • 반응형 웹 디자인 구현
 • SEO 최적화 및 성능 개선
 • 관리자 페이지 개발`,
-      technologies: ["React", "Next.js", "Tailwind CSS", "Vercel"],
+      technologies: ["Next.js", "Styled-components", "Framer Motion", "Vercel"],
       link: "https://spesate.com/",
     },
     {

@@ -5,10 +5,10 @@ import { IoMdClose } from "react-icons/io";
 import { createPortal } from "react-dom";
 
 const menuItems = [
-  { label: "소개", href: "#about" },
-  { label: "경력", href: "#experience" },
-  { label: "포트폴리오", href: "#project" },
-  { label: "연락처", href: "#contact" },
+  { label: "ABOUT ME", href: "#about" },
+  { label: "EXPERIENCE", href: "#experience" },
+  { label: "PROJECT", href: "#project" },
+  { label: "CONTACT", href: "#contact" },
 ];
 
 interface MobileSidebarMenuProps {
