@@ -41,7 +41,7 @@ export default function MainBanner() {
         {/* 메인 텍스트 */}
         <main className="flex relative flex-col flex-1 justify-center items-center">
           <div className="flex relative flex-col items-center w-fit">
-            {/* "프론트엔드 개발자" - 밑에서 위로 슬라이드 + 페이드인 */}
+            {/* "풀스택 개발자" - 밑에서 위로 슬라이드 + 페이드인 */}
             <span
               className={`
                 block text-5xl md:text-6xl font-extrabold text-[#FF4D00] text-center select-none continuous
@@ -55,7 +55,7 @@ export default function MainBanner() {
               `}
               style={{ letterSpacing: "0.05em" }}
             >
-              FrontEnd
+              Full Stack
             </span>
             {/* "최다예 입니다." - 항상 중앙에 고정 */}
             <span
@@ -66,7 +66,7 @@ export default function MainBanner() {
               `}
               style={{ letterSpacing: "0.05em" }}
             >
-              <span className="font-medium">프론트엔드 개발자 </span>
+              <span className="font-medium">풀스택 개발자 </span>
               <span className="font-extrabold">최다예</span>
               <span className="font-medium"> 입니다.</span>
             </span>
