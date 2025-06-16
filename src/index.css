@@ -52,3 +52,8 @@
 .animate-pop-arrow {
   animation: pop-arrow 1.1s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
