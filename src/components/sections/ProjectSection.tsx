@@ -35,8 +35,7 @@ const ProjectSection = () => {
       thumbnail: images.projects.spesate,
       fullDescription: `• 기업 홈페이지 리뉴얼 프로젝트
 • 반응형 웹 디자인 구현
-• SEO 최적화 및 성능 개선
-• 관리자 페이지 개발`,
+• SEO 최적화 및 성능 개선`,
       technologies: ["Next.js", "Styled-components", "Framer Motion", "Vercel"],
       link: "https://spesate.com/",
     },
