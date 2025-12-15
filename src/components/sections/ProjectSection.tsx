@@ -46,7 +46,8 @@ const ProjectSection = () => {
       fullDescription: `• Next.js를 활용한 기업 홈페이지 개발
 • Vercel을 통한 CI/CD 파이프라인 구축
 • SSG/SSR 혼합 방식으로 성능 최적화
-• Serverless 함수를 활용한 운영 효율성 강화`,
+• Serverless 함수를 활용한 운영 효율성 강화
+• 다국어 지원(한국어/영어) / IP 기반 자동 언어 감지`,
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
       link: "https://rckorea.vercel.app/",
     },
